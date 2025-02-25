@@ -4,7 +4,7 @@ import xarray as xr
 
 # Visualisation libs.
 # Можно лучше
-# пока визуализации нет, тратим время на подключение ненужных библиотеки
+# пока визуализации нет, тратим время на подключение ненужных библиотек
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
@@ -21,7 +21,7 @@ import cartopy.feature as cfeature
 # КРИТИЧНО
 # Если файл отсутствует, вылетит ошибка. Лучше добавить os.path.exists()
 # Можно лучше
-# использовать модуль os для определния абсолютного пути (os.path.join(os.path.dirname(__file__), 'ORCA_R36_coord_new.nc'))
+# использовать модуль os для определения абсолютного пути (os.path.join(os.path.dirname(__file__), 'ORCA_R36_coord_new.nc'))
 pcf = xr.open_dataset('/mnt/localssd/Data_nemo/Meshes_domains/Coordinates/Global/ORCA_R36_coord_new.nc').squeeze()
 # КРИТИЧНО
 # использовать метод get для извлечения x, проверять тип перед делением
@@ -45,7 +45,7 @@ atl_last_xind = pcf['x'].size - pac_first_xind + 1
 # КРИТИЧНО
 # нужна проверка наличия директории, а лучше вновь использовать os (os.mkdirs(exist_ok=True))
 # Можно лучше
-# и здесь, и с открытием pcf можно передавать пути как аргумент в командной строке (модель argparse)
+# и здесь, и с открытием pcf можно передавать пути как аргумент в командной строке (модуль argparse)
 # либо создать отдельный конфиг
 target_path = '/mnt/localssd/Data_nemo/Meshes_domains/Coordinates/Regional'
 target_name = 'arct_cutorca36_coord.nc'
