@@ -86,7 +86,7 @@ def grid_selector(pcf, var, extent, pac_patch=False):
     # также нужно проверять, является ли pcf объектом класса, обладающего методом sel (xr.Dataset)
     # if var not in pcf: raise ValueError
     # if not isinstance(pcf.get(var), xr.Dataset): raise ValueError
-    # можно поймать IndexError при работе с extent, нужна проверка вида if len(extent) != 4, как вариант
+    # можно поймать IndexError при работе с extent, нужна проверка вида if len(extent) == 4, как вариант
     if pac_patch:  # Pacific patch selection
         # Можно лучше
         # много повторяющегося кода, можно вынести в отдельную функцию, передавать значение 0/1 для вычитания
