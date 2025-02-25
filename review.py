@@ -53,7 +53,7 @@ target_name = 'arct_cutorca36_coord.nc'
 # Patch processing
 
 # КРИТИЧНО/Можно лучше, вопрос спорный :)
-# dosctring не бьется с аргументами (pac_patch / atl_patch)
+# docstring не бьется с аргументами (pac_patch / atl_patch)
 def grid_selector(pcf, var, extent, pac_patch=False):
     '''
     Functon that select and cut 2D arrays from parent global ORCA coordinate file.
